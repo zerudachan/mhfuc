@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-links">
+                <hr>
+                <li><a href="index.html">Home</a></li>
+                <hr>
+                <li><a href="monsterlist.html">Monsters</a></li>
+                <hr>
+                <li><a href="quests.html">Quests</a></li>
+                <hr>
+            </ul>
+            
+            <b>MHFUC</b>
+        </div>
+        
+        <script>
+            function toggleMenu() {
+                const navLinks = document.querySelector('.nav-links');
+                navLinks.classList.toggle('active');
+            }
+        </script>
+            
+    </header>
+    <div class="mainContent">
+        <!--hero image section-->
+        <div id="hero">
+            <img class="heroNarg" src="FrBEHyzWYAAVNrH.jpg" alt="Hero image of a Nargacuga.">
+            <div class="heroText">
+                <p>Welcome to the Monster Hunter Freedom Unite Compendium!</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <p>Unleash your full hunting potential with the Monster Hunter Freedom Unite 
+                 Compendium (MHFUC). Dive deep into the world of Monster Hunter 
+                Freedom Unite with comprehensive insights on monster weaknesses, damage
+                charts, item drops, and quests. Whether you're a seasoned hunter or just  
+                starting your journey, MHFUMC equips you with the knowledge you need  
+                to conquer any challenge. Explore now and embark on your quests with  
+                newfound confidence!</p>
+        </div>
+
+        <div class="center-image">
+            <img class="Logo-MHFU" src="img/Logo-MHFU.png" alt="Logo-MHFU">
+        </div>
+
+        <div class="section explore">
+            <p>Explore different sections that the site offers:</p>
+            <ul class="secList">
+                <a href="monsterlist.html"><li>Monsters List</li></a>
+                <a href="quests.html"><li>Quests</li></a>
+            </ul>
+        </div>
+        
+
+
+    </div>
+
+
+    <div class="footer">
+        <p>Monster Hunter IP &copy; Capcom Co., Ltd.</p>
+    </div>
+
+</body>
+
+</html>
