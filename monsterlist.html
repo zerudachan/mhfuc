@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster List</title>
+    <link rel="stylesheet" href="style-mons.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-links">
+                <hr>
+                <li><a href="index.html">Home</a></li>
+                <hr>
+                <li><a href="monsterlist.html">Monsters</a></li>
+                <hr>
+                <li><a href="quests.html">Quests</a></li>
+                <hr>
+            </ul>
+            
+            <b>MHFUC</b>
+        </div>
+        
+        <script>
+            function toggleMenu() {
+                const navLinks = document.querySelector('.nav-links');
+                navLinks.classList.toggle('active');
+            }
+        </script>
+            
+    </header>
+    
+    <!--searchbar and filter button-->
+    <div class="filterSearch">
+        <h2>Monster List</h2>
+        <div class="filterElement">
+            <label for="filterSelect">Filter by Category:</label>
+        </div>
+        <select id="filterSelect" onchange="filterItems()">
+            <option value="all">All</option>
+            <option value="smallM">Small Monsters</option>
+            <option value="largeM">Large Monsters</option>
+            <option value="elderM">Elder Dragons</option>
+        </select>
+        <input type="text" id="searchInput" onkeyup="searchItems()" placeholder="Search for items..">
+    </div>
+
+    <!--monster list-->
+    <div class="itemList">
+        <div class="item smallM">
+            <a href="aptonoth.html">
+                <img src="img/icons/monster_aptonoth.png">
+                <p>Aptonoth</p>
+            </a>
+        </div>
+        <div class="item smallM">
+            <img src="img/icons/monster_bullfango.png">
+            <p>Bullfango</p>
+        </div>
+        <div class="item elderM">
+            <a href="chameleos.html">
+                <img src="img/icons/monster_chameleos.png">
+                <p>Chameleos</p>
+            </a>
+        </div>
+        <div class="item largeM">
+            <img src="img/icons/monster_diablos.png">
+            <p>Diablos</p>
+        </div>
+        <div class="item elderM">
+            <img src="img/icons/monster_unidentified.png">
+            <p>Fatalis</p>
+        </div>
+        <div class="item smallM">
+            <img src="img/icons/monster_felyne.png">
+            <p>Felyne</p>
+        </div>
+        <div class="item smallM">
+            <img src="img/icons/monster_genprey.png">
+            <p>Genprey</p>
+        </div>
+        <div class="item smallM">
+            <img src="img/icons/monster_hornetaur.png">
+            <p>Hornetaur</p>
+        </div>
+        <div class="item smallM">
+            <img src="img/icons/monster_kelbi.png">
+            <p>Kelbi</p>
+        </div>
+        <div class="item elderM">
+            <img src="img/icons/monster_kirin.png">
+            <p>Kirin</p>
+        </div>
+        <div class="item elderM">
+            <img src="img/icons/monster_lao_shan_lung.png">
+            <p>Lao Shan Lung</p>
+        </div>
+        <div class="item smallM">
+            <img src="img/icons/monster_melynx.png">
+            <p>Melynx</p>
+        </div>
+        <div class="item largeM">
+            <img src="img/icons/monster_nargacuga.png">
+            <p>Nargacuga</p>
+        </div>
+        <div class="item smallM">
+            <img src="img/icons/monster_popo.png">
+            <p>Popo</p>
+        </div>
+        <div class="item largeM">
+            <a href="rathalos.html">
+                <img src="img/icons/monster_rathalos.png">
+                <p>Rathalos</p>
+            </a>
+        </div>
+        <div class="item largeM">
+            <img src="img/icons/monster_rathian.png">
+            <p>Rathian</p>
+        </div>
+        <div class="item smallM">
+            <img src="img/icons/monster_remobra.png">
+            <p>Remobra</p>
+        </div>
+        <div class="item largeM">
+            <img src="img/icons/monster_tigrex.png">
+            <p>Tigrex</p>
+        </div>
+        <div class="item largeM">
+            <img src="img/icons/monster_velocidrome.png">
+            <p>Velocidrome</p>
+        </div>
+        <div class="item smallM">
+            <img src="img/icons/monster_velociprey.png">
+            <p>Velociprey</p>
+        </div>
+        <div class="item smallM">
+            <img src="img/icons/monster_vespoid.png">
+            <p>Vespoid</p>
+        </div>
+        <div class="item largeM">
+            <img src="img/icons/monster_yian_garuga.png">
+            <p>Yian Garuda</p>
+        </div>
+        <div class="item largeM">
+            <img src="img/icons/monster_yian_kut_ku.png">
+            <p>Yian Kut Ku</p>
+        </div>
+        
+    </div>
+
+    <script>
+        function filterItems() {
+            const select = document.getElementById('filterSelect');
+            const category = select.value;
+            const items = document.querySelectorAll('.item');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'inline-block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function searchItems() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toUpperCase();
+            const items = document.querySelectorAll('.item');
+
+            items.forEach(item => {
+                const textContent = item.textContent || item.innerText;
+                const match = textContent.toUpperCase().indexOf(filter) > -1;
+
+                if (match) {
+                    item.style.display = 'inline-block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    <div class="footer">
+        <p>Monster Hunter IP &copy; Capcom Co., Ltd.</p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e5d3b3;
+}
+
+.navbar {
+    background-color: #987554;
+    color: rgb(241, 241, 241);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px auto;
+    transition: transform 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+/* mobile css */
+
+@media screen and (max-width: 800px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .mainContent {
+        min-height: calc(100vh - 60px); /* Adjust 60px according to footer height */
+    }
+
+    .filter-btns {
+        margin-bottom: 10px;
+    }
+
+    .item {
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .nav-links {
+        display: block;
+        position: absolute;
+        top: 28px;
+        left: -100%;
+        width: 100%;
+        background-color: #987554;
+        transition: left 0.3s ease;
+        z-index: 1;
+    }
+
+    .nav-links.active {
+        left: 0;
+        
+    }
+
+    .nav-links.active + .menu-icon div {
+        transform: rotate(90deg);
+    }
+
+    .nav-links li {
+        display:flex;
+    }
+
+    .nav-links hr{
+        color:  rgba(0, 0, 0, 0.4);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust the values to control the shadow */
+        margin: 0;
+        padding-bottom: 0;
+    }
+
+    .nav-links a{
+        color: rgb(241, 241, 241);
+        text-decoration: none;
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 1;
+        padding: 3vh;
+        width: 100%;
+    }
+
+    .nav-links a:visited{
+        color: rgb(241, 241, 241);
+    }
+
+
+    /* filter and search */
+    .filterSearch {
+        margin: 10%;
+    }
+
+    .filterSearch h2 {
+        text-align: center;
+        margin: -1vh;
+    }
+
+    .filterElement {
+        margin: 2vh;
+        text-align: center;
+    }
+
+    .secList {
+        list-style-type: none;
+        text-align: justify;
+    }
+    
+    .itemList {
+        margin: 4vh;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-column-gap: 5px;
+        grid-row-gap: 5px; 
+        margin-bottom: 18%;
+    }
+
+    .item img {
+        height: 12vh;
+    }
+
+    .item a {
+        color: #000;
+        text-decoration: none;
+    }
+
+    .item a:visited {
+        color: #000;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #664229;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+    }
+}

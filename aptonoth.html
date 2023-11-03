@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster List</title>
+    <link rel="stylesheet" href="wiki.css">
+<body>
+    <header>
+        <div class="navbar">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-links">
+                <hr>
+                <li><a href="index.html">Home</a></li>
+                <hr>
+                <li><a href="monsterlist.html">Monsters</a></li>
+                <hr>
+                <li><a href="quests.html">Quests</a></li>
+                <hr>
+            </ul>
+            
+            <b>MHFUC</b>
+        </div>
+        
+        <script>
+            function toggleMenu() {
+                const navLinks = document.querySelector('.nav-links');
+                navLinks.classList.toggle('active');
+            }
+        </script>
+            
+    </header>
+    
+    <div class="backBttn">
+      <a href="monsterlist.html">&larr; Back to monster list</a>
+    </div>
+    
+    <div class="section">
+        <h2>Aptonoth</h2>
+        <img class="monsterIco" src="img/icons/monster_aptonoth.png" alt="">
+        <div class="elements">
+            <div>
+                <p>Element:</p>
+                None
+            </div>
+            <div>
+                <p>Ailments:</p>
+                None
+            </div>
+            <div>
+                <p>Weaknesses:</p>
+                <img class="statusIco" src="img/icons/fireblight.png" title="Ice">
+                <img class="statusIco" src="img/icons/waterblight.png" title="Water">
+                <img class="statusIco" src="img/icons/thunderblight.png" title="Thunder">
+                <img class="statusIco" src="img/icons/iceblight.png" title="Ice">
+            </div>
+        </div>
+        
+    </div>
+
+    <!--effectiveness table-->
+    <div class="section">
+        <h2>Element and Status </h2>
+            <table class="status">
+                <thead>
+                    <tr>
+                        <th class="tg-zqun"><span style="font-weight:bold">Part</span></th>
+                        <th class="tg-zqun"><span><img class="tableIco" src="img/icons/icon_great_sword.png" alt=""></span></th>
+                        <th class="tg-zqun"><span><img class="tableIco" src="img/icons/icon_hammer.png" alt=""></span></th>
+                        <th class="tg-zqun"><span><img class="tableIco" src="img/icons/icon_light_bowgun.png" alt=""></span></th>
+                        <th class="tg-zqun"><span><img class="tableIco" src="img/icons/fireblight.png" alt=""></span></th>
+                        <th class="tg-zqun"><span><img class="tableIco" src="img/icons/waterblight.png" alt=""></span></th>
+                        <th class="tg-zqun"><span><img class="tableIco" src="img/icons/thunderblight.png" alt=""></span></th>
+                        <th class="tg-zqun"><span><img class="tableIco" src="img/icons/iceblight.png" alt=""></span></th>
+                        <th class="tg-zqun"><span><img class="tableIco" src="img/icons/dragonblight.png" alt=""></span></th>
+                        <th class="tg-zqun"><span><img class="tableIco" src="img/icons/stun.png" alt=""></span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tg-p7cy">Body</td>
+                            <td class="tg-p7cy">110</td>
+                            <td class="tg-p7cy">110</td>
+                            <td class="tg-p7cy">110</td>
+                            <td class="tg-p7cy">50</td>
+                            <td class="tg-p7cy">50</td>
+                            <td class="tg-p7cy">50</td>
+                            <td class="tg-p7cy">50</td>
+                            <td class="tg-p7cy">10</td>
+                            <td class="tg-p7cy">100</td>
+                        </tr>
+                </tbody>
+            </table>
+    </div>
+
+    <div class="section">
+        <h2>Drops and Carves</h2>
+        <h4>Body Carves</h4>
+        <style>
+          .monsterPiece {
+              filter: brightness(50%) saturate(100%) invert(0%) sepia(100%) hue-rotate(310deg) contrast(2);
+          }
+        </style>
+        <table class="tg">
+            <colgroup>
+            <col style="width: 25.2px">
+            <col style="width: 195.2px">
+            <col style="width: 39.2px">
+            </colgroup>
+            <tbody>
+              <tr>
+                <td class="tg-0pky"><img class="tableIco monsterPiece" src="img/icons/icon_meat.png" alt="scale"></td>
+                <td class="tg-za14">Raw Meat</td>
+                <td class="tg-jkyp">35%</td>
+              </tr>
+              <tr>
+                <td class="tg-0pky"><img class="tableIco" src="img/icons/icon_bone.png" alt="Image"></td>
+                <td class="tg-za14">Sm Monster Bone</td>
+                <td class="tg-jkyp">35%</td>
+              </tr>
+              <tr>
+                <td class="tg-0pky"><img class="tableIco" src="img/icons/icon_bone.png" alt="Image"></td>
+                <td class="tg-za14">Med Monster Bone</td>
+                <td class="tg-jkyp">20%</td>
+              </tr>
+            </tbody>
+            </table>
+    </div>
+
+    <div class="section">
+        <h2>Locations</h2>
+            <table class="tg">
+            <thead>
+              <tr>
+                <td class="tg-0pky"><img class="LocationIco" src="img/icons/Forest.png" alt=""></th>
+                <td class="tg-0pky">Forest and Hills</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tg-0pky"><img class="LocationIco" src="img/icons/OldJungle.png" alt=""></td>
+                <td class="tg-0pky">Old Jungle</td>
+              </tr>
+              <tr>
+                <td class="tg-0pky"><img class="LocationIco" src="img/icons/OldSwamp.png" alt=""></td>
+                <td class="tg-0pky">Old Swamp</td>
+              </tr>
+              <tr>
+                <td class="tg-0pky"><img class="LocationIco" src="img/icons/SnowyMountain.png" alt=""></td>
+                <td class="tg-0pky">Snowy Mountains</td>
+              </tr>
+              <tr>
+                <td class="tg-0pky"><img class="LocationIco" src="img/icons/Jungle.png" alt=""></td>
+                <td class="tg-0pky">Jungle</td>
+              </tr>
+              <tr>
+                <td class="tg-0pky"><img class="LocationIco" src="img/icons/Swamp.png" alt=""></td>
+                <td class="tg-0pky">Swamp</td>
+              </tr>
+              <tr>
+                <td class="tg-0pky"><img class="LocationIco" src="img/icons/GreatForest.png" alt=""></td>
+                <td class="tg-0pky">Great Forest</td>
+              </tr>
+              <tr>
+                <td class="tg-0pky"><img class="LocationIco" src="img/icons/Tower.png" alt=""></td>
+                <td class="tg-0pky">Tower</td>
+              </tr>
+            </tbody>
+            </table>
+    </div>
+    
+    <br>
+    <br>
+    <br>
+    <hr>
+    <div class="footer">
+      <p>Monster Hunter IP &copy; Capcom Co., Ltd.</p>
+  </div>
+
+</body>
+
+</html>

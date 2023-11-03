@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quests</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <hr>
+                <li><a href="monsterlist.html">Monsters</a></li>
+                <hr>
+                <li><a href="quests.html">Quests</a></li>
+                <hr>
+            </ul>
+            
+            <b>MHFUC</b>
+        </div>
+        
+        <script>
+            function toggleMenu() {
+                const navLinks = document.querySelector('.nav-links');
+                navLinks.classList.toggle('active');
+            }
+        </script>
+            
+    </header>
+    <div class="mainContent">
+        <!--searchbar and filter button-->
+    <div class="filterSearch">
+        <h2>Quest List</h2>
+        <div class="filterElement">
+            <label for="filterSelect">Filter by Category:</label>
+        </div>
+        <select id="filterSelect" onchange="filterItems()">
+            <option value="all">All</option>
+            <option value="1star">1 ★</option>
+            <option value="2star">2 ★</option>
+            <option value="3star">3 ★</option>
+        </select>
+        <input type="text" id="searchInput" onkeyup="searchItems()" placeholder="Search for items..">
+    </div>
+
+    <div class="items">
+        <div class="item 1star">
+            <h2 class="questTableHeader">1 ★ Village Quests</h2>
+            <style type="text/css">
+                .tg  {border-collapse:collapse;border-spacing:0;}
+                .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                  overflow:hidden;padding:10px 5px;word-break:normal;}
+                .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                .tg .tg-bobw{font-weight:bold;text-align:center;vertical-align:bottom}
+                .tg .tg-uozz{color:#F00;text-align:left;vertical-align:bottom}
+                .tg .tg-3n9r{color:#00F;text-align:left;vertical-align:bottom}
+                .tg .tg-7zrl{text-align:left;vertical-align:bottom}
+                .tg .tg-0lax{text-align:left;vertical-align:top}
+                </style>
+                <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-bobw"><span style="font-weight:bold">Quest name</span></th>
+                    <th class="tg-bobw"><span style="font-weight:bold">Objective</span></th>
+                    <th class="tg-bobw"><span style="font-weight:bold">Area</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-7zrl">Mountain Herb Picking</td>
+                    <td class="tg-7zrl">Deliver 5 Mountain Herbs.</td>
+                    <td class="tg-7zrl">Snowy Mountains (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">An Anteka in the Snow</td>
+                    <td class="tg-7zrl">Deliver 3 Anteka Antlers.</td>
+                    <td class="tg-7zrl">Snowy Mountains (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-3n9r"><span style="color:#00F">Hunt the Carnivore! (Key)</span></td>
+                    <td class="tg-7zrl">Slay 5 Giaprey.</td>
+                    <td class="tg-7zrl">Snowy Mountains (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-3n9r"><span style="color:#00F">Sinking Feeling (Key)</span></td>
+                    <td class="tg-7zrl">Deliver 3 Popo Tongues.</td>
+                    <td class="tg-7zrl">Snowy Mountains (Night)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-3n9r"><span style="color:#00F">Slay the Blangos! (Key)</span></td>
+                    <td class="tg-7zrl">Slay 3 Blangos.</td>
+                    <td class="tg-0lax">Snowy Mountains (Night)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-uozz"><span style="color:#F00">The Carnivorous Leader (Urgent)</span></td>
+                    <td class="tg-7zrl">Hunt the Giadrome.</td>
+                    <td class="tg-0lax">Snowy Mountains (Day)</td>
+                  </tr>
+                </tbody>
+                </table>
+        </div>
+        <div class="item 2star">
+            
+            <h2 class="questTableHeader">2 ★ Village Quests</h2>
+            <style type="text/css">
+                .tg  {border-collapse:collapse;border-spacing:0;}
+                .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                  overflow:hidden;padding:10px 5px;word-break:normal;}
+                .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                .tg .tg-uozz{text-align:left;vertical-align:bottom}
+                .tg .tg-3n9r{text-align:left;vertical-align:bottom}
+                .tg .tg-fll5{border-color:inherit;font-weight:bold;text-align:center;vertical-align:bottom}
+                .tg .tg-za14{border-color:inherit;text-align:left;vertical-align:bottom}
+                .tg .tg-zdns{border-color:inherit;text-align:left;vertical-align:bottom}
+                .tg .tg-bs6g{border-color:inherit;text-align:left;vertical-align:bottom}
+                .tg .tg-7zrl{text-align:left;vertical-align:bottom}
+                </style>
+                <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-fll5"><span style="font-weight:bold">Quest name</span></th>
+                    <th class="tg-fll5"><span style="font-weight:bold">Objective</span></th>
+                    <th class="tg-fll5"><span style="font-weight:bold">Area</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-za14">Gathering - Snowy Mountains</td>
+                    <td class="tg-za14">Deliver the Paw Pass Ticket.</td>
+                    <td class="tg-za14">Snowy Mountains (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-za14">Gathering - Jungle Zone</td>
+                    <td class="tg-za14">Deliver the Paw Pass Ticket.</td>
+                    <td class="tg-za14">Jungle (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-zdns">Gathering - Desert Zone</td>
+                    <td class="tg-za14">Deliver the Paw Pass Ticket</td>
+                    <td class="tg-za14">Desert (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-zdns">The Carnivorous Leader</td>
+                    <td class="tg-za14">Hunt the Giadrome</td>
+                    <td class="tg-za14">Snowy Mountains (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-zdns"><span style="color:#00F">Reckless Bulldrome Hunter (Key)</span></td>
+                    <td class="tg-za14">Hunt the Bulldrome</td>
+                    <td class="tg-za14">Snowy Mountain (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-bs6g">Slay the Giaprey!</td>
+                    <td class="tg-za14">Slawy 20 Giaprey</td>
+                    <td class="tg-za14">Snowy Mountains (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">The Pack of Blangos</td>
+                    <td class="tg-7zrl">Slawy 5 Blango</td>
+                    <td class="tg-7zrl">Snowy Mountains (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">The Taboo of Negligence!</td>
+                    <td class="tg-7zrl">Deliver 15 Mountain Herbs</td>
+                    <td class="tg-7zrl">Snowy Mountains (Night)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">Hunt Down the Velocidrome!</td>
+                    <td class="tg-7zrl">Hunt the Velocidrome</td>
+                    <td class="tg-7zrl">Jungle (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-3n9r"><span style="color:#00F">Jungle Menace (Key)</span></td>
+                    <td class="tg-7zrl">Hunt the Yian Kut-Ku</td>
+                    <td class="tg-7zrl">Jungle (Night)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-3n9r"><span style="color:#00F">Rarest of the Rare Beasts (Key)</span></td>
+                    <td class="tg-7zrl">Hunt the Congalala</td>
+                    <td class="tg-7zrl">Jungle (Night)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">Hunt the Rare Forest Congas!</td>
+                    <td class="tg-7zrl">Slay 10 Conga</td>
+                    <td class="tg-7zrl">Jungle (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">Attack of the Giant Bugs!</td>
+                    <td class="tg-7zrl">Slay 20 Vespoids</td>
+                    <td class="tg-7zrl">Jungle (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">Collect to Combine</td>
+                    <td class="tg-7zrl">Deliver 10 Special Mushrooms</td>
+                    <td class="tg-7zrl">Jungle (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">Hunt the Gendrome!</td>
+                    <td class="tg-7zrl">Hunt the Gendrome</td>
+                    <td class="tg-7zrl">Desert (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">The Land Shark</td>
+                    <td class="tg-7zrl">Hunt the Cephadrome</td>
+                    <td class="tg-7zrl">Desert (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-3n9r"><span style="color:#00F">Liver of Legend! (Key)</span></td>
+                    <td class="tg-7zrl">Deliver 3 Piscine Livers</td>
+                    <td class="tg-7zrl">Desert (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">Gone Fishin'</td>
+                    <td class="tg-7zrl">Deliver 2 Goldenfish</td>
+                    <td class="tg-7zrl">Desert (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-uozz"><span style="color:#F00">Shadow in the Snow (Urgent)</span></td>
+                    <td class="tg-7zrl">Hunt the Khezu</td>
+                    <td class="tg-7zrl">Snowy Mountains (Day)</td>
+                  </tr>
+                </tbody>
+                </table>
+        </div>
+        <div class="item 3star">
+            <h2 class="questTableHeader">3 ★ Village Quests</h2>
+            <style type="text/css">
+                .tg  {border-collapse:collapse;border-spacing:0;}
+                .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                  overflow:hidden;padding:10px 5px;word-break:normal;}
+                .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+                  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+                .tg .tg-wa1i{font-weight:bold;text-align:center;vertical-align:middle}
+                .tg .tg-uozz{color:#F00;text-align:left;vertical-align:bottom}
+                .tg .tg-3n9r{color:#00F;text-align:left;vertical-align:bottom}
+                .tg .tg-7zrl{text-align:left;vertical-align:bottom}
+                </style>
+                <table class="tg">
+                <thead>
+                  <tr>
+                    <th class="tg-wa1i">Quest name</th>
+                    <th class="tg-wa1i">Objective</th>
+                    <th class="tg-wa1i">Area</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="tg-7zrl">Gathering - Swamp Zone</td>
+                    <td class="tg-7zrl">Deliver the Paw Pass Ticket</td>
+                    <td class="tg-7zrl">Swamp (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">Gathering - Forest &amp; Hills</td>
+                    <td class="tg-7zrl">Deliver the Paw Pass Ticket</td>
+                    <td class="tg-7zrl">Forest &amp; Hills (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">Shadow in the Snow</td>
+                    <td class="tg-7zrl">Hunt the Khezu</td>
+                    <td class="tg-7zrl">Snowy Mountains (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">The Subterranean Glutton</td>
+                    <td class="tg-7zrl">Deliver 3 Khezu Whelps</td>
+                    <td class="tg-7zrl">Snowy Mountains (Night)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-3n9r"><span style="color:#00F">Blango Slaying Tactics (Key)</span></td>
+                    <td class="tg-7zrl">Slay 10 Blango</td>
+                    <td class="tg-7zrl">Snowy Mountains (Night)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">Aim for the Jungle Crab</td>
+                    <td class="tg-7zrl">Hunt the Daimyo Hermitaur</td>
+                    <td class="tg-7zrl">Jungle (Night)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">Master of the Giant Lake</td>
+                    <td class="tg-7zrl">Hunt the Green Plesioth</td>
+                    <td class="tg-7zrl">Jungle (Night)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">A Swarm of Hermitaurs</td>
+                    <td class="tg-7zrl">Slay 10 Hermitaurs</td>
+                    <td class="tg-7zrl">Jungle (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">The Purple Poison Menace</td>
+                    <td class="tg-7zrl">Hunt the Purple Gypceros</td>
+                    <td class="tg-7zrl">Jungle (Night)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-3n9r"><span style="color:#00F">The Lurking Desert Giant (Key)</span></td>
+                    <td class="tg-7zrl">Hunt the Daimyo Hermitaur</td>
+                    <td class="tg-7zrl">Desert (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">Water Wyvern in the Desert</td>
+                    <td class="tg-7zrl">Hunt the Plesioth</td>
+                    <td class="tg-7zrl">Desert (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">Slay the Genprey!</td>
+                    <td class="tg-7zrl">Slay 20 Genprey</td>
+                    <td class="tg-7zrl">Desert (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-3n9r"><span style="color:#00F">Gypceros: Venomous Terror (Key)</span></td>
+                    <td class="tg-7zrl">Hunt the Gypceros</td>
+                    <td class="tg-7zrl">Swamp (Night)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">Attack of the Blue Kut-Ku</td>
+                    <td class="tg-7zrl">Hunt the Blue Yian Kut-Ku</td>
+                    <td class="tg-7zrl">Swamp (Night)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">The Mischief-maker</td>
+                    <td class="tg-7zrl">Hunt the Congalala</td>
+                    <td class="tg-7zrl">Swamp (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">Fang of the Iodrome!</td>
+                    <td class="tg-7zrl">Hunt the Iodrome</td>
+                    <td class="tg-7zrl">Swamp (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-7zrl">Slay the Great Kut-Ku</td>
+                    <td class="tg-7zrl">Hunt the Yian Kut-Ku</td>
+                    <td class="tg-7zrl">Forest &amp; Hills (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-3n9r"><span style="color:#00F">A Killing from Mushrooms (Key)</span></td>
+                    <td class="tg-7zrl">Deliver 10 Special Mushrooms</td>
+                    <td class="tg-7zrl">Forest &amp; Hills (Day)</td>
+                  </tr>
+                  <tr>
+                    <td class="tg-uozz"><span style="color:#F00">The Ruler of the Snow (Urgent)</span></td>
+                    <td class="tg-7zrl">Hunt the Blangonga</td>
+                    <td class="tg-7zrl">Snowy Mountains (Day)</td>
+                  </tr>
+                </tbody>
+                </table>
+        </div>
+        
+    </div>
+
+    </div>
+    <script>
+        function filterItems() {
+            const select = document.getElementById('filterSelect');
+            const category = select.value;
+            const items = document.querySelectorAll('.item');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'inline-block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function searchItems() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toUpperCase();
+            const items = document.querySelectorAll('.item');
+
+            items.forEach(item => {
+                const textContent = item.textContent || item.innerText;
+                const match = textContent.toUpperCase().indexOf(filter) > -1;
+
+                if (match) {
+                    item.style.display = 'inline-block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+
+    <br>
+    <br>
+    <br>
+    <hr>
+    <div class="footer">
+      <p>Monster Hunter IP &copy; Capcom Co., Ltd.</p>
+  </div>
+
+</body>
+
+</html>
